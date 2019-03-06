@@ -1,7 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 body{
   margin: 0;
+  background-color: rgb(10, 10, 10);
   /*This might mess some things up later maybe try it if things go haywire*/
 }
 .hiddenlink{
@@ -11,6 +13,13 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
+}
+#title{
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  font-weight: lighter;
+  font-size: 2vw;
+  padding: 1%
 }
 #flexboxbody{
   display: flex;
