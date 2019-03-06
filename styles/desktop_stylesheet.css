@@ -28,6 +28,13 @@ body{
   justify-content: center;
   align-items: flex-start;
 }
+#flexboxpagebody{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
 .flexboxchild{
   background-size: cover;
   width: 50%;
