@@ -28,7 +28,7 @@ for line in Data:
     Title = line[0]
     FontSize = line[1]
     Date = ConvertDate(line[2])
-    TitleImage = "./images/" + line[3]
+    TitleImage = "./images/icon" + line[3]
     PageName = "./pages/" + line[4] + ".html"
 
     Template = []
