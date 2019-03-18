@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
 @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 body{
   margin: 0;
   background-color: rgb(10, 10, 10);
-  /*This might mess some things up later maybe try it if things go haywire*/
 }
 .hiddenlink{
   text-decoration: none;
@@ -14,12 +13,25 @@ body{
   justify-content: center;
   align-items: center;
 }
+#titlewrapper{
+  padding: 1%;
+}
 #title{
   color: white;
   font-family: 'Source Code Pro', monospace;
-  font-weight: lighter;
   font-size: 2vw;
-  padding: 1%
+}
+#textbody{
+  width: 45vw;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-size: 2vw;
+  margin: 2vw;
+}
+#pageimage{
+  width: 45vw;
+  margin: 2vw;
 }
 #flexboxbody{
   display: flex;
@@ -33,7 +45,7 @@ body{
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 .flexboxchild{
   background-size: cover;
