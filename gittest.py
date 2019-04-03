@@ -1,7 +1,7 @@
 import subprocess
 message = "Auto Commit Attempts..."
-username = input("Username: ")
-password = input("Password: ")
+username = input("Username: ").encode()
+password = input("Password: ").encode()
 
 addlist = ["git", "add", "."]
 addcmd = "git add ."
