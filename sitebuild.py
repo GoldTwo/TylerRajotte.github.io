@@ -1,6 +1,7 @@
 # Tyler Rajotte
 # Script to take content from a csv and convert it to HTML to copy paste into my site
 import datetime
+import os
 
 def ConvertDate(Input):
     MonthData = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -32,14 +33,14 @@ for line in Data:
     PageName = "./pages/" + line[4] + ".html"
 
     Template = []
-    Template.append("     <div class=\"flexboxchild\" style=\"background-image: url(\'{}\')\">\n".format(TitleImage))
-    Template.append("       <a class=\"hiddenlink\" href=\"{}\">\n".format(PageName))
-    Template.append("         <div class=\"childcontainer\">\n")
-    Template.append("           <div class=\"childtitle\" style=\"font-size: {}vw\">{}</div>\n".format(FontSize, Title))
-    Template.append("           <div class=\"childdate\">{}</div>\n".format(Date))
-    Template.append("         </div>\n")
-    Template.append("       </a>\n")
-    Template.append("     </div>\n")
+    Template.append("      <div class=\"flexboxchild\" style=\"background-image: url(\'{}\')\">\n".format(TitleImage))
+    Template.append("        <a class=\"hiddenlink\" href=\"{}\">\n".format(PageName))
+    Template.append("          <div class=\"childcontainer\">\n")
+    Template.append("            <div class=\"childtitle\" style=\"font-size: {}vw\">{}</div>\n".format(FontSize, Title))
+    Template.append("            <div class=\"childdate\">{}</div>\n".format(Date))
+    Template.append("          </div>\n")
+    Template.append("        </a>\n")
+    Template.append("      </div>\n")
 
     MainExport.append(Template)
 
