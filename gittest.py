@@ -11,5 +11,5 @@ subprocess.call(commitcmd, shell=True)
 
 pushlist = ["git", "push"]
 pushcmd = "git push"
-push = subprocess.Popen(pushcmd, stdout=subprocess.PIPE).communicate()
+push = subprocess.Popen(pushlist, stdout=subprocess.PIPE).communicate()
 print(push)
