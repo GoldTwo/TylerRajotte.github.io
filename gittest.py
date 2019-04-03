@@ -7,4 +7,5 @@ subprocess.call(addlist)
 commitlist = ["git", "commit", "-a", "-m", "\"" + message + "\""]
 subprocess.call(commitlist)
 
-# os.system("git push")
+pushlist = ["git", "push"]
+subprocess.call(pushlist)
