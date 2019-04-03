@@ -13,7 +13,7 @@ subprocess.call(commitcmd, shell=True)
 
 pushlist = ["git", "push"]
 pushcmd = "git push"
-push = subprocess.Popen(pushcmd, stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+push = subprocess.Popen(pushlist, stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
 push.communicate(input=username)
 push.communicate(input=password)
 
