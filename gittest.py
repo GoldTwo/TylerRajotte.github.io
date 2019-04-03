@@ -8,4 +8,4 @@ commitlist = ["git", "commit", "-a", "-m", "\"" + message + "\""]
 subprocess.call(commitlist)
 
 pushlist = ["git", "push"]
-subprocess.call(pushlist)
+subprocess.call(pushlist, shell=True)
