@@ -1,0 +1,32 @@
+      <div class="flexboxchild" style="background-image: url('./images/icon80swallpaper.jpeg')">
+        <a class="hiddenlink" href="./pages/80swallpaper.html">
+          <div class="childcontainer">
+            <div class="childtitle" style="font-size: 6vw">80’s Wallpaper</div>
+            <div class="childdate">February 28, 2019</div>
+          </div>
+        </a>
+      </div>
+      <div class="flexboxchild" style="background-image: url('./images/iconflamesword.jpeg')">
+        <a class="hiddenlink" href="./pages/flamesword.html">
+          <div class="childcontainer">
+            <div class="childtitle" style="font-size: 5vw">Flame Sword Simulation</div>
+            <div class="childdate">February 21, 2019</div>
+          </div>
+        </a>
+      </div>
+      <div class="flexboxchild" style="background-image: url('./images/iconrandomrender01.jpeg')">
+        <a class="hiddenlink" href="./pages/randomrender01.html">
+          <div class="childcontainer">
+            <div class="childtitle" style="font-size: 6vw">Random Render 01</div>
+            <div class="childdate">February 18, 2019</div>
+          </div>
+        </a>
+      </div>
+      <div class="flexboxchild" style="background-image: url('./images/iconlowpolytitle.jpeg')">
+        <a class="hiddenlink" href="./pages/lowpoly.html">
+          <div class="childcontainer">
+            <div class="childtitle" style="font-size: 6vw">Low Poly</div>
+            <div class="childdate">January 24, 2019</div>
+          </div>
+        </a>
+      </div>

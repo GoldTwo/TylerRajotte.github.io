@@ -1,0 +1,11 @@
+Have placeholders within the html document and the script auto inserts the 
+code there
+
+Build git support right into the script so it should auto deploy once the
+site is built
+
+Scale the title text on main page?
+
+Scale the body text automaticly 
+
+Maybe specify photos within the pagedata text file
