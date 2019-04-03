@@ -2,10 +2,13 @@ import subprocess
 message = "Auto Commit Attempts..."
 
 addlist = ["git", "add", "."]
-subprocess.call(addlist)
+addcmd = "git add ."
+subprocess.call(addcmd, shell=True)
 
 commitlist = ["git", "commit", "-a", "-m", "\"" + message + "\""]
-subprocess.call(commitlist)
+commitcmd = "git commit -a -m \"" + message + "\""
+subprocess.call(commitcmd, shell=True)
 
 pushlist = ["git", "push"]
-subprocess.call(pushlist, shell=True)
+pushcmd = "git push"
+subprocess.call(pushcmd, shell=True)
