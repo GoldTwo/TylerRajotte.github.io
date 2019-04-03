@@ -1,6 +1,10 @@
-import os
+import subprocess
 message = "Auto Commit Attempts..."
 
-os.system("git add .")
-os.system("git commit -a -m \"{}\"".format(message))
+addlist = ["git", "add", "."]
+subprocess.call(addlist)
+
+commitlist = ["git", "commit", "-a", "-m", "\"" + message + "\""]
+subprocess.call(commitlist)
+
 # os.system("git push")
