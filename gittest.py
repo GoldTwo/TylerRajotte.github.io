@@ -33,9 +33,13 @@
 import git
 import os
 import datetime
-message = ""
+import getpass
+
+username = input("Username: ")
+password = getpass.getpass("Password: ")
+
 print(os.getcwd())
 repo = git.Repo(os.getcwd())
 repo.git.add(".")
 repo.git.commit(m="SiteAutoBuild-{}".format(datetime.datetime.now().date()))
-repo.git.push()
+repo.git.push(username=username, password=password)
