@@ -1,21 +1,23 @@
-import subprocess
-message = "Auto Commit Attempts..."
-username = input("Username: ").encode()
-password = input("Password: ").encode()
-
-addlist = ["git", "add", "."]
-addcmd = "git add ."
-subprocess.call(addcmd, shell=True)
-
-commitlist = ["git", "commit", "-a", "-m", "\"" + message + "\""]
-commitcmd = "git commit -a -m \"" + message + "\""
-subprocess.call(commitcmd, shell=True)
-
-pushlist = ["git", "push"]
-pushcmd = "git push"
-push = subprocess.Popen(pushlist, stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
-push.communicate(input=username)
-push.communicate(input=password)
+# import subprocess
+# import getpass
+# message = "Auto Commit Attempts..."
+# username = input("Username: ").encode()
+# password = getpass.getpass("Password: ")
+# password = password.encode()
+#
+# addlist = ["git", "add", "."]
+# addcmd = "git add ."
+# subprocess.call(addcmd, shell=True)
+#
+# commitlist = ["git", "commit", "-a", "-m", "\"" + message + "\""]
+# commitcmd = "git commit -a -m \"" + message + "\""
+# subprocess.call(commitcmd, shell=True)
+#
+# pushlist = ["git", "push"]
+# pushcmd = "git push"
+# push = subprocess.Popen(pushlist, stdout=subprocess.PIPE, stdin=subprocess.PIPE, stderr=subprocess.PIPE)
+# push.communicate(input=username)
+# push.communicate(input=password)
 
 # It might be better to use communicate:
 #
@@ -28,3 +30,12 @@ push.communicate(input=password)
 #     Use communicate() rather than .stdin.write, .stdout.read or .stderr.read to avoid deadlocks due to any of the other OS pipe buffers filling up and blocking the child process.
 #
 
+import git
+import os
+import datetime
+message = ""
+print(os.getcwd())
+repo = git.Repo(os.getcwd())
+repo.git.add(".")
+repo.git.commit(m="SiteAutoBuild-{}".format(datetime.datetime.now().date()))
+repo.git.push()
