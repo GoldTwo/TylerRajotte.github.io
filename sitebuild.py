@@ -2,50 +2,74 @@
 # Script to take content from a csv and convert it to HTML to copy paste into my site
 import datetime
 import os
+import git
 
-def ConvertDate(Input):
-    MonthData = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
-    Splited = Input.split("-")
-    Year = Splited[0]
-    Date = Splited[2]
-    Month = MonthData[int(Splited[1]) - 1]
-    return "{} {}, {}".format(Month, Date, Year)
 
-MainExport = []
+class SiteBuild(object):
+    def __init__(self):
+        self.MainExport = []
+        self.data = []
 
-DataBase = open("TotalyANewDatabase.csv", "r")
-Data = DataBase.read().split("\n")
-DataBase.close()
-del Data[0]
+        self.__import()
+        self.__createdata()
+        self.__export()
+        # self.__deploy()
 
-for line in Data:
-    if line == "":
-        continue
+        print("Site Built!")
 
-    line = line.split(",")
+    @staticmethod
+    def __deploy():
+        repo = git.Repo(os.getcwd())
+        repo.git.add(".")
+        repo.git.commit(m="SiteAutoBuild-{}".format(datetime.datetime.now().date()))
+        repo.git.push()
 
-    print("Created: " + str(line))
+    @staticmethod
+    def __convertdate(inputdate):
+        monthdata = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
+                     "November", "December"]
+        splited = inputdate.split("-")
+        year = splited[0]
+        date = splited[2]
+        month = monthdata[int(splited[1]) - 1]
+        return "{} {}, {}".format(month, date, year)
 
-    Title = line[0]
-    FontSize = line[1]
-    Date = ConvertDate(line[2])
-    TitleImage = "./images/icon" + line[3]
-    PageName = "./pages/" + line[4] + ".html"
+    def __import(self):
+        database = open("TotalyANewDatabase.csv", "r")
+        self.data = database.read().split("\n")
+        database.close()
+        del self.data[0]
 
-    Template = []
-    Template.append("      <div class=\"flexboxchild\" style=\"background-image: url(\'{}\')\">\n".format(TitleImage))
-    Template.append("        <a class=\"hiddenlink\" href=\"{}\">\n".format(PageName))
-    Template.append("          <div class=\"childcontainer\">\n")
-    Template.append("            <div class=\"childtitle\" style=\"font-size: {}vw\">{}</div>\n".format(FontSize, Title))
-    Template.append("            <div class=\"childdate\">{}</div>\n".format(Date))
-    Template.append("          </div>\n")
-    Template.append("        </a>\n")
-    Template.append("      </div>\n")
+    def __export(self):
+        output = open("SiteBuild_{}.txt".format(datetime.datetime.now().date()), "w")
+        for entry in self.MainExport:
+            for xline in entry:
+                output.write(xline)
+        output.close()
 
-    MainExport.append(Template)
+    def __createdata(self):
+        for line in self.data:
+            if line == "":
+                continue
 
-output = open("SiteBuild_{}.txt".format(datetime.datetime.now().date()), "w")
-for entry in MainExport:
-    for line in entry:
-        output.write(line)
-output.close()
+            line = line.split(",")
+
+            print("Created: " + str(line))
+
+            Title = line[0]
+            FontSize = line[1]
+            Date = self.__convertdate(line[2])
+            TitleImage = "./images/icon" + line[3]
+            PageName = "./pages/" + line[4] + ".html"
+
+            Template = []
+            Template.append("      <div class=\"flexboxchild\" style=\"background-image: url(\'{}\')\">\n".format(TitleImage))
+            Template.append("        <a class=\"hiddenlink\" href=\"{}\">\n".format(PageName))
+            Template.append("          <div class=\"childcontainer\">\n")
+            Template.append("            <div class=\"childtitle\" style=\"font-size: {}vw\">{}</div>\n".format(FontSize, Title))
+            Template.append("            <div class=\"childdate\">{}</div>\n".format(Date))
+            Template.append("          </div>\n")
+            Template.append("        </a>\n")
+            Template.append("      </div>\n")
+
+            self.MainExport.append(Template)
