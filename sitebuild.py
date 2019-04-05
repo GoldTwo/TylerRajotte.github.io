@@ -127,6 +127,7 @@ class SiteBuild(object):
 
         images = entry[7].split("|")
         for image in images:
+            print(image)
             image = "./images/pageimages/" + image
             imagetemplate = "<img src=\"{}\" style=\"width:inherit;\">\n".format(image)
             pagebody.append(imagetemplate)
