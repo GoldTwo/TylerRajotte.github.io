@@ -7,18 +7,22 @@ import git
 
 class SiteBuild(object):
     def __init__(self):
-        self.MainExport = []
+        self.homebody = []
         self.data = []
 
         self.__import()
-        self.__createdata()
+        print("Imported Data")
+        self.__newpost()
+        print("Created Posts")
         self.__export()
+        print("Exported Code Block")
         # self.__deploy()
 
         print("Site Built!")
 
     @staticmethod
     def __deploy():
+        # Deploys current directory to github
         repo = git.Repo(os.getcwd())
         repo.git.add(".")
         repo.git.commit(m="SiteAutoBuild-{}".format(datetime.datetime.now().date()))
@@ -26,6 +30,7 @@ class SiteBuild(object):
 
     @staticmethod
     def __convertdate(inputdate):
+        # Converts Dates from numbers to a nicely formated version 
         monthdata = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October",
                      "November", "December"]
         splited = inputdate.split("-")
@@ -35,6 +40,7 @@ class SiteBuild(object):
         return "{} {}, {}".format(month, date, year)
 
     def __import(self):
+        # Imports the CSV file and splits it based on newlines and puts it into self.data
         database = open("TotalyANewDatabase.csv", "r")
         self.data = database.read().split("\n")
         database.close()
@@ -42,34 +48,44 @@ class SiteBuild(object):
 
     def __export(self):
         output = open("SiteBuild_{}.txt".format(datetime.datetime.now().date()), "w")
-        for entry in self.MainExport:
+        for entry in self.homebody:
             for xline in entry:
                 output.write(xline)
         output.close()
 
-    def __createdata(self):
+    def __newpost(self):
+        # New post on homepage
         for line in self.data:
             if line == "":
                 continue
 
             line = line.split(",")
 
-            print("Created: " + str(line))
+            print("Creating: " + str(line))
 
-            Title = line[0]
-            FontSize = line[1]
-            Date = self.__convertdate(line[2])
-            TitleImage = "./images/icon" + line[3]
-            PageName = "./pages/" + line[4] + ".html"
+            title = line[0]
+            fontsize = line[1]
+            date = self.__convertdate(line[2])
+            titleimage = "./images/icon" + line[3]
+            pagename = "./pages/" + line[4] + ".html"
 
-            Template = []
-            Template.append("      <div class=\"flexboxchild\" style=\"background-image: url(\'{}\')\">\n".format(TitleImage))
-            Template.append("        <a class=\"hiddenlink\" href=\"{}\">\n".format(PageName))
-            Template.append("          <div class=\"childcontainer\">\n")
-            Template.append("            <div class=\"childtitle\" style=\"font-size: {}vw\">{}</div>\n".format(FontSize, Title))
-            Template.append("            <div class=\"childdate\">{}</div>\n".format(Date))
-            Template.append("          </div>\n")
-            Template.append("        </a>\n")
-            Template.append("      </div>\n")
+    def __createhomepost(self, title, fontsize, date, titleimage, pagename):
+        date = self.__convertdate(date)
+        titleimage = "./images/icon" + titleimage
+        pagename = "./pages/" + pagename + ".html"
 
-            self.MainExport.append(Template)
+        template = [
+            "      <div class=\"flexboxchild\" style=\"background-image: url(\'{}\')\">\n".format(titleimage),
+            "        <a class=\"hiddenlink\" href=\"{}\">\n".format(pagename),
+            "          <div class=\"childcontainer\">\n",
+            "            <div class=\"childtitle\" style=\"font-size: {}vw\">{}</div>\n".format(fontsize, title),
+            "            <div class=\"childdate\">{}</div>\n".format(date),
+            "          </div>\n",
+            "        </a>\n",
+            "      </div>\n"]
+
+        self.homebody.append(template)
+
+
+if __name__ == "__main__":
+    SiteBuild()
