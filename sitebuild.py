@@ -8,12 +8,15 @@ import git
 class SiteBuild(object):
     def __init__(self):
         self.homebody = []
+        self.homebodystring = ""
         self.data = []
 
         self.__import()
         print("Imported Data")
         self.__newpost()
         print("Created Posts")
+        self.__compileposts()
+        print("Compiled Posts")
         self.__export()
         print("Exported Code Block")
         # self.__deploy()
@@ -39,6 +42,13 @@ class SiteBuild(object):
         month = monthdata[int(splited[1]) - 1]
         return "{} {}, {}".format(month, date, year)
 
+    def __compileposts(self):
+        compileposts = ""
+        for post in self.homebody:
+            for codeline in post:
+                compileposts = compileposts + codeline
+        self.homebodystring = compileposts
+
     def __import(self):
         # Imports the CSV file and splits it based on newlines and puts it into self.data
         database = open("TotalyANewDatabase.csv", "r")
@@ -47,32 +57,36 @@ class SiteBuild(object):
         del self.data[0]
 
     def __export(self):
-        output = open("SiteBuild_{}.txt".format(datetime.datetime.now().date()), "w")
-        for entry in self.homebody:
-            for xline in entry:
-                output.write(xline)
-        output.close()
+        templateindexfile = open("UFindex.html", "r")
+        templateindex = templateindexfile.read().split("\n")
+        templateindexfile.close()
+
+        indexoutput = open("index.html", "w")
+        for line in templateindex:
+            if line == "|body|":
+                indexoutput.write(self.homebodystring)
+            else:
+                indexoutput.write(line + "\n")
 
     def __newpost(self):
         # New post on homepage
-        for line in self.data:
-            if line == "":
+        for entry in self.data:
+            if entry == "":
                 continue
 
-            line = line.split(",")
+            entry = entry.split(",")
 
-            print("Creating: " + str(line))
+            print("Creating: " + str(entry))
+            
+            self.__createhomepost(entry)
+            self.__createpage(entry)
 
-            title = line[0]
-            fontsize = line[1]
-            date = self.__convertdate(line[2])
-            titleimage = "./images/icon" + line[3]
-            pagename = "./pages/" + line[4] + ".html"
-
-    def __createhomepost(self, title, fontsize, date, titleimage, pagename):
-        date = self.__convertdate(date)
-        titleimage = "./images/icon" + titleimage
-        pagename = "./pages/" + pagename + ".html"
+    def __createhomepost(self, entry):
+        title = entry[0]
+        fontsize = entry[1]
+        date = self.__convertdate(entry[2])
+        titleimage = "./images/icon" + entry[3]
+        pagename = "./pages/" + entry[4] + ".html"
 
         template = [
             "      <div class=\"flexboxchild\" style=\"background-image: url(\'{}\')\">\n".format(titleimage),
@@ -85,6 +99,9 @@ class SiteBuild(object):
             "      </div>\n"]
 
         self.homebody.append(template)
+
+    def __createpage(self, entry):
+        print("Creating Page: {}".format(entry))
 
 
 if __name__ == "__main__":

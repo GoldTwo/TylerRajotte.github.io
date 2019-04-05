@@ -1,5 +1,4 @@
-Have placeholders within the html document and the script auto inserts the 
-code there
+Generate the body pages automaticly
 
 Scale the title text on main page?
 
