@@ -19,7 +19,8 @@ class SiteBuild(object):
         print("Compiled Posts")
         self.__export()
         print("Exported Code Block")
-        # self.__deploy()
+        self.__deploy()
+        print("Site Deployed")
 
         print("Site Built!")
 
@@ -85,7 +86,7 @@ class SiteBuild(object):
         title = entry[0]
         fontsize = entry[1]
         date = self.__convertdate(entry[2])
-        titleimage = "./images/icon" + entry[3]
+        titleimage = "./images/icon/" + entry[3]
         pagename = "./pages/" + entry[4] + ".html"
 
         template = [
