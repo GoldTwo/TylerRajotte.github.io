@@ -19,7 +19,7 @@ class SiteBuild(object):
         print("Compiled Posts")
         self.__export()
         print("Exported Code Block")
-        self.__deploy()
+        # self.__deploy()
         print("Site Deployed")
 
         print("Site Built!")
@@ -120,16 +120,19 @@ class SiteBuild(object):
         pagebodydatafile.close()
 
         texttemplate = [
-            "<div id=\"textbody\" style=\"font-size: {}vw;\">\n".format(entry[6]),
+            "      <div id=\"textbody\" style=\"font-size: {}vw;\">\n".format(entry[6]),
             "{}\n".format(pagebodydata),
-            "</div>\n"
+            "      </div>\n"
         ]
 
         images = entry[7].split("|")
         for image in images:
-            print(entry[7])
-            image = "./images/pageimages/" + image
-            imagetemplate = "<img src=\"{}\" style=\"width:inherit;\">\n".format(image)
+            image = "../images/pageimages/" + image
+            imagetemplate = [
+                "      <div id=\"pageimage\">\n",
+                "        <img src=\"{}\" style=\"width:inherit;\">\n".format(image),
+                "      </div>\n"
+            ]
             pagebody.append(imagetemplate)
 
         pagebody.insert(1, texttemplate)

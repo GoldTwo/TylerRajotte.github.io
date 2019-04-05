@@ -1,7 +1,3 @@
-Generate the body pages automaticly
-
 Scale the title text on main page?
-
+(Compare to known word/character count and calculate then)
 Scale the body text automaticly 
-
-Maybe specify photos within the pagedata text file
