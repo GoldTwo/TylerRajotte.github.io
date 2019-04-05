@@ -43,6 +43,14 @@ class SiteBuild(object):
         month = monthdata[int(splited[1]) - 1]
         return "{} {}, {}".format(month, date, year)
 
+    @staticmethod
+    def __flattenlist(inputlist):
+        flatten = ""
+        for item in inputlist:
+            for line in item:
+                flatten = flatten + line
+        return flatten
+
     def __compileposts(self):
         compileposts = ""
         for post in self.homebody:
@@ -52,18 +60,18 @@ class SiteBuild(object):
 
     def __import(self):
         # Imports the CSV file and splits it based on newlines and puts it into self.data
-        database = open("TotalyANewDatabase.csv", "r")
+        database = open("PageData.csv", "r")
         self.data = database.read().split("\n")
         database.close()
         del self.data[0]
 
     def __export(self):
-        templateindexfile = open("UFindex.html", "r")
-        templateindex = templateindexfile.read().split("\n")
-        templateindexfile.close()
+        indextemplatefile = open("template/indexTemplate.html", "r")
+        indextemplate = indextemplatefile.read().split("\n")
+        indextemplatefile.close()
 
         indexoutput = open("index.html", "w")
-        for line in templateindex:
+        for line in indextemplate:
             if line == "|body|":
                 indexoutput.write(self.homebodystring)
             else:
@@ -80,7 +88,10 @@ class SiteBuild(object):
             print("Creating: " + str(entry))
             
             self.__createhomepost(entry)
-            self.__createpage(entry)
+            try:
+                self.__createpage(entry)
+            except FileNotFoundError:
+                print("Missing Files to Build Page: {}".format(entry[0]))
 
     def __createhomepost(self, entry):
         title = entry[0]
@@ -102,7 +113,37 @@ class SiteBuild(object):
         self.homebody.append(template)
 
     def __createpage(self, entry):
-        print("Creating Page: {}".format(entry))
+        pagebody = []
+
+        pagebodydatafile = open("pagedata/{}.txt".format(entry[5]), "r")
+        pagebodydata = pagebodydatafile.read().replace("\n", " ")
+        pagebodydatafile.close()
+
+        texttemplate = [
+            "<div id=\"textbody\" style=\"font-size: {}vw;\">\n".format(entry[6]),
+            "{}\n".format(pagebodydata),
+            "</div>\n"
+        ]
+
+        images = entry[7].split("|")
+        for image in images:
+            imagetemplate = "<img src=\"{}\" style=\"width:inherit;\">\n".format(image)
+            pagebody.append(imagetemplate)
+
+        pagebody.insert(1, texttemplate)
+
+        # Writing Data to a new page
+        pagetemplatefile = open("template/bodyTemplate.html", "r")
+        pagetemplate = pagetemplatefile.read().split("\n")
+        pagetemplatefile.close()
+
+        newpage = open("pages/{}.html".format(entry[4]), "w")
+        for line in pagetemplate:
+            if line == "|body|":
+                newpage.write(self.__flattenlist(pagebody))
+            else:
+                newpage.write(line + "\n")
+        newpage.close()
 
 
 if __name__ == "__main__":
