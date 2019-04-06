@@ -19,7 +19,7 @@ class SiteBuild(object):
         print("Compiled Posts")
         self.__export()
         print("Exported Code Block")
-        # self.__deploy()
+        self.__deploy()
         print("Site Deployed")
 
         print("Site Built!")
@@ -64,6 +64,7 @@ class SiteBuild(object):
         self.data = database.read().split("\n")
         database.close()
         del self.data[0]
+        self.data = self.data[::-1]
 
     def __export(self):
         indextemplatefile = open("template/indexTemplate.html", "r")
