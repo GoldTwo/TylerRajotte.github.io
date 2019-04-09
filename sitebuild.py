@@ -129,10 +129,12 @@ class SiteBuild(object):
         images = entry[7].split("|")
 
         for image in images:
-            if "<iframe" in image:
+            image = image.replace("\"", "")
+            if "$" in image:
+                image = image.replace("$", "")
                 videotemplate = [
-                    "      <div id=\"pageimage\">\n",
-                    "        {}\n".format(image),
+                    "      <div id=\"pagevideo\">\n",
+                    "        <iframe width=\"100%\" height=\"100%\" src=\"{}\" frameborder=\"0\" allowfullscreen></iframe>\n".format(image),
                     "      </div>\n"
                 ]
                 pagebody.append(videotemplate)

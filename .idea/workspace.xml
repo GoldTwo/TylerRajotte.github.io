@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="8edbd7cf-ef60-4a5e-9937-ac3807570934" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.~lock.PageData.csv#" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/PageData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PageData.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/flamesword.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/flamesword.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/inkdrop.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/inkdrop.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pages/pwstoryboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/pages/pwstoryboard.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sitebuild.py" beforeDir="false" afterPath="$PROJECT_DIR$/sitebuild.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/desktop_stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/desktop_stylesheet.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -16,11 +21,20 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sitebuild.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="131" column="34" selection-start-line="131" selection-start-column="34" selection-end-line="131" selection-end-column="34" />
+            <state relative-caret-position="193">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
               <folding>
                 <element signature="e#102#117#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles/desktop_stylesheet.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="171">
+              <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
             </state>
           </provider>
         </entry>
@@ -82,6 +96,7 @@
         <option value="$PROJECT_DIR$/ideas.txt" />
         <option value="$PROJECT_DIR$/pages/blankpage.html" />
         <option value="$PROJECT_DIR$/template/bodyTemplate.html" />
+        <option value="$PROJECT_DIR$/styles/desktop_stylesheet.css" />
         <option value="$PROJECT_DIR$/sitebuild.py" />
       </list>
     </option>
@@ -109,12 +124,7 @@
             <path>
               <item name="tylerrajotte.github.io" type="b2602c69:ProjectViewProjectNode" />
               <item name="tylerrajotte.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="tylerrajotte.github.io" type="b2602c69:ProjectViewProjectNode" />
-              <item name="tylerrajotte.github.io" type="462c0819:PsiDirectoryNode" />
-              <item name="pagedata" type="462c0819:PsiDirectoryNode" />
+              <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="tylerrajotte.github.io" type="b2602c69:ProjectViewProjectNode" />
@@ -130,7 +140,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.spelling" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -222,14 +232,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49873418" visible="true" weight="0.17572598" />
       <window_info id="Structure" order="1" sideWeight="0.5012658" side_tool="true" weight="0.17572598" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.34380165" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3586777" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -271,16 +280,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TotalyANewDatabase.csv" />
     <entry file="file://$PROJECT_DIR$/pages/blankpage.html" />
-    <entry file="file://$PROJECT_DIR$/sitebuild.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="131" column="34" selection-start-line="131" selection-start-column="34" selection-end-line="131" selection-end-column="34" />
-          <folding>
-            <element signature="e#102#117#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/template/bodyTemplate.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
@@ -295,6 +294,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="6" selection-start-column="6" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/styles/desktop_stylesheet.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="36" column="15" selection-start-line="36" selection-start-column="15" selection-end-line="36" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sitebuild.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="193">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="8" />
+          <folding>
+            <element signature="e#102#117#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
