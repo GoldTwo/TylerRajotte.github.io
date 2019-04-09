@@ -1,3 +1,0 @@
-Scale the title text on main page?
-(Compare to known word/character count and calculate then)
-Scale the body text automaticly 
