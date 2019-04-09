@@ -127,14 +127,23 @@ class SiteBuild(object):
         ]
 
         images = entry[7].split("|")
+
         for image in images:
-            image = "../images/pageimages/" + image
-            imagetemplate = [
-                "      <div id=\"pageimage\">\n",
-                "        <img src=\"{}\" style=\"width:inherit;\">\n".format(image),
-                "      </div>\n"
-            ]
-            pagebody.append(imagetemplate)
+            if "<iframe" in image:
+                videotemplate = [
+                    "      <div id=\"pageimage\">\n",
+                    "        {}\n".format(image),
+                    "      </div>\n"
+                ]
+                pagebody.append(videotemplate)
+            else:
+                image = "../images/pageimages/" + image
+                imagetemplate = [
+                    "      <div id=\"pageimage\">\n",
+                    "        <img src=\"{}\" style=\"width:inherit;\">\n".format(image),
+                    "      </div>\n"
+                ]
+                pagebody.append(imagetemplate)
 
         pagebody.insert(1, texttemplate)
 
