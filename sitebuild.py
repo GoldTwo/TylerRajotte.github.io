@@ -124,7 +124,7 @@ class SiteBuild(object):
             "      <div id=\"textbody\" class=\"desktoppagetext\" style=\"font-size: {}vw;\">\n".format(entry[6]),
             "{}\n".format(pagebodydata),
             "      </div>\n",
-            "      <div id=\"textbody\" class=\"mobilepagetext\" style=\"font-size: {}vw;\">\n".format(float(entry[6]) * 5),
+            "      <div id=\"textbody\" class=\"mobilepagetext\" style=\"font-size: {}vw;\">\n".format(float(entry[6]) * 4),
             "{}\n".format(pagebodydata),
             "      </div>\n"
         ]

@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8edbd7cf-ef60-4a5e-9937-ac3807570934" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/images/icon/pwstoryboard.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/icon/pwstoryboard.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sitebuild.py" beforeDir="false" afterPath="$PROJECT_DIR$/sitebuild.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sitebuild.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="478">
-              <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+            <state relative-caret-position="364">
+              <caret line="126" column="122" selection-start-line="126" selection-start-column="122" selection-end-line="126" selection-end-column="122" />
               <folding>
                 <element signature="e#102#117#0" expanded="true" />
               </folding>
@@ -271,8 +272,8 @@
     <entry file="file://$PROJECT_DIR$/pages/blankpage.html" />
     <entry file="file://$PROJECT_DIR$/sitebuild.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="132" lean-forward="true" selection-start-line="132" selection-end-line="132" />
+        <state relative-caret-position="364">
+          <caret line="126" column="122" selection-start-line="126" selection-start-column="122" selection-end-line="126" selection-end-column="122" />
           <folding>
             <element signature="e#102#117#0" expanded="true" />
           </folding>
