@@ -38,9 +38,6 @@ body{
   height: 30vh;
   margin: 2vw;
 }
-#desktoppagetext{
-  display: none;
-}
 #flexboxbody{
   display: flex;
   flex-direction: row;
@@ -54,6 +51,9 @@ body{
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
+}
+.desktoppagetext{
+  display: none;
 }
 .flexboxchild{
   background-size: cover;

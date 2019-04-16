@@ -51,7 +51,7 @@ body{
   justify-content: center;
   align-items: center;
 }
-#mobilepagetext{
+.mobilepagetext{
   display: none;
 }
 .flexboxchild{
