@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto+Mono');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300');
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
 
 body{
   margin: 0;
-  /*This might mess some things up later maybe try it if things go haywire*/
-/* }
+  background-color: rgb(10, 10, 10);
+}
 .hiddenlink{
   text-decoration: none;
 }
@@ -12,6 +13,31 @@ body{
   justify-content: center;
   align-items: center;
 }
+#titlewrapper{
+  padding: 1%;
+}
+#title{
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 6vw;
+  text-align: center;
+}
+#textbody{
+  width: 45vw;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  margin: 2vw;
+}
+#pageimage{
+  width: 45vw;
+  margin: 2vw;
+}
+#pagevideo{
+  width: 45vw;
+  height: 45vh;
+  margin: 2vw;
+}
 #flexboxbody{
   display: flex;
   flex-direction: row;
@@ -19,10 +45,18 @@ body{
   justify-content: center;
   align-items: flex-start;
 }
+#flexboxpagebody{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 .flexboxchild{
   background-size: cover;
-  width: 50%;
-  height: 40vh;
+  background-position: center;
+  width: 100%;
+  height: 30vh;
 }
 .childcontainer{
   display:flex;
@@ -43,9 +77,9 @@ body{
 }
 .childdate{
   font-family: 'Roboto Mono', monospace;
-  font-size: 1vw;
+  font-size: 4vw;
   text-align: right;
   text-decoration: none;
   color: white;
   padding: 1vw;
-} */
+}
