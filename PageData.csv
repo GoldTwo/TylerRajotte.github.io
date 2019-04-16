@@ -1,9 +1,9 @@
-Title,Font Size,Date,Title Image,Page Name,PageBodyTextFile,PageBodyFontSize,Main Image (Seprate w/ |) Specify Videos with $
-Low Poly,6,2019-01-24,lowpolytitle.jpeg,lowpoly,LowPoly,1.4,LowPolyTree_Full.jpg|LowPolyBarrel_Full.jpg|LowPolyLamp_Full.jpg
-Random Render 01,6,2019-02-18,randomrender01.jpeg,randomrender01,RandomRender01,1.85,RandomRender01_Full.jpg
-Flame Sword Simulation,5,2019-02-21,flamesword.jpeg,flamesword,FlameSword,1.6,FlameSwordStill_Full.jpg|$https://www.youtube.com/embed/htfmbJzsKEU
-80’s Wallpaper,6,2019-02-28,80swallpaper.jpeg,80swallpaper,80swallpaper,1.65,80swallpaper_full.jpg
-Ink Drop Simulation,6,2019-03-08,inkdrop.png,inkdrop,Inkdrop,1.3,Inkdrop_full.jpg|$https://www.youtube.com/embed/7F7zW_SB8U4
-Mountain Render,6,2019-03-14,MountainRender.png,mountainrender,mountainrender,1.55,MountainRender_Full.jpg
-Project Windows Storyboard,5,2019-03-26,pwstoryboard.png,pwstoryboard,pwstoryboard,1.55,PWStoryboard_full.jpg|$https://www.youtube.com/embed/W8Bz11qT27s
-Subject Separation Tests,5,2019-04-09,SubjectSeparation.png,subjectseparation,SubjectSeparation,1.3,$https://www.youtube.com/embed/GoOx5Gz1VL0
+Title,Font Size (medium or large),Date,Title Image,Page Name,PageBodyTextFile,PageBodyFontSize,Main Image (Seprate w/ |) Specify Videos with $
+Low Poly,large,2019-01-24,lowpolytitle.jpeg,lowpoly,LowPoly,1.4,LowPolyTree_Full.jpg|LowPolyBarrel_Full.jpg|LowPolyLamp_Full.jpg
+Random Render 01,large,2019-02-18,randomrender01.jpeg,randomrender01,RandomRender01,1.85,RandomRender01_Full.jpg
+Flame Sword Simulation,medium,2019-02-21,flamesword.jpeg,flamesword,FlameSword,1.6,FlameSwordStill_Full.jpg|$https://www.youtube.com/embed/htfmbJzsKEU
+80’s Wallpaper,large,2019-02-28,80swallpaper.jpeg,80swallpaper,80swallpaper,1.65,80swallpaper_full.jpg
+Ink Drop Simulation,large,2019-03-08,inkdrop.png,inkdrop,Inkdrop,1.3,Inkdrop_full.jpg|$https://www.youtube.com/embed/7F7zW_SB8U4
+Mountain Render,large,2019-03-14,MountainRender.png,mountainrender,mountainrender,1.55,MountainRender_Full.jpg
+Project Windows Storyboard,medium,2019-03-26,pwstoryboard.png,pwstoryboard,pwstoryboard,1.55,PWStoryboard_full.jpg|$https://www.youtube.com/embed/W8Bz11qT27s
+Subject Separation Tests,medium,2019-04-09,SubjectSeparation.png,subjectseparation,SubjectSeparation,1.3,$https://www.youtube.com/embed/GoOx5Gz1VL0

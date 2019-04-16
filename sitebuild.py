@@ -105,7 +105,7 @@ class SiteBuild(object):
             "      <div class=\"flexboxchild\" style=\"background-image: url(\'{}\')\">\n".format(titleimage),
             "        <a class=\"hiddenlink\" href=\"{}\">\n".format(pagename),
             "          <div class=\"childcontainer\">\n",
-            "            <div class=\"childtitle\" style=\"font-size: {}vw\">{}</div>\n".format(fontsize, title),
+            "            <div class=\"childtitle {}text\">{}</div>\n".format(fontsize, title),
             "            <div class=\"childdate\">{}</div>\n".format(date),
             "          </div>\n",
             "        </a>\n",

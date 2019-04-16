@@ -83,3 +83,9 @@ body{
   color: white;
   padding: 1vw;
 }
+.mediumtext{
+  font-size: 5vw;
+}
+.bigtext{
+  font-size: 6vw;
+}
