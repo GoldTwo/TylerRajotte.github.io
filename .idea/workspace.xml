@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8edbd7cf-ef60-4a5e-9937-ac3807570934" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/images/icon/pwstoryboard.png" beforeDir="false" afterPath="$PROJECT_DIR$/images/icon/pwstoryboard.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sitebuild.py" beforeDir="false" afterPath="$PROJECT_DIR$/sitebuild.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
