@@ -23,20 +23,23 @@ body{
   text-align: center;
 }
 #textbody{
-  width: 45vw;
+  width: 100vw;
   color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
   margin: 2vw;
 }
 #pageimage{
-  width: 45vw;
+  width: 100vw;
   margin: 2vw;
 }
 #pagevideo{
-  width: 45vw;
-  height: 45vh;
+  width: 100vw;
+  height: 30vh;
   margin: 2vw;
+}
+#desktoppagetext{
+  display: none;
 }
 #flexboxbody{
   display: flex;

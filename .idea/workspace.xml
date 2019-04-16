@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8edbd7cf-ef60-4a5e-9937-ac3807570934" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/PageData.csv" beforeDir="false" afterPath="$PROJECT_DIR$/PageData.csv" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/sitebuild.py" beforeDir="false" afterPath="$PROJECT_DIR$/sitebuild.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/desktop_stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/desktop_stylesheet.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/mobile_stylesheet.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/mobile_stylesheet.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +16,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/sitebuild.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="402">
-              <caret line="107" column="48" selection-start-line="107" selection-start-column="48" selection-end-line="107" selection-end-column="48" />
+            <state relative-caret-position="364">
+              <caret line="126" column="105" selection-start-line="126" selection-start-column="105" selection-end-line="126" selection-end-column="105" />
               <folding>
                 <element signature="e#102#117#0" expanded="true" />
               </folding>
@@ -39,7 +37,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/template/bodyTemplate.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="361">
+            <state relative-caret-position="380">
               <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
             </state>
           </provider>
@@ -229,6 +227,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49873418" visible="true" weight="0.17572598" />
       <window_info id="Structure" order="1" sideWeight="0.5012658" side_tool="true" weight="0.17572598" />
@@ -258,13 +257,7 @@
     <entry file="file://$PROJECT_DIR$/SiteBuild_2019-04-04.txt" />
     <entry file="file://$PROJECT_DIR$/gittest.py" />
     <entry file="file://$PROJECT_DIR$/pages/blankpage (copy).html" />
-    <entry file="file://$PROJECT_DIR$/ideas.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/ideas.txt" />
     <entry file="file://$PROJECT_DIR$/UFindex.html" />
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
@@ -279,8 +272,8 @@
     <entry file="file://$PROJECT_DIR$/pages/blankpage.html" />
     <entry file="file://$PROJECT_DIR$/sitebuild.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="402">
-          <caret line="107" column="48" selection-start-line="107" selection-start-column="48" selection-end-line="107" selection-end-column="48" />
+        <state relative-caret-position="364">
+          <caret line="126" column="105" selection-start-line="126" selection-start-column="105" selection-end-line="126" selection-end-column="105" />
           <folding>
             <element signature="e#102#117#0" expanded="true" />
           </folding>
@@ -296,7 +289,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/template/bodyTemplate.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
+        <state relative-caret-position="380">
           <caret line="20" column="1" selection-start-line="20" selection-start-column="1" selection-end-line="20" selection-end-column="1" />
         </state>
       </provider>
