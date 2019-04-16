@@ -121,10 +121,10 @@ class SiteBuild(object):
         pagebodydatafile.close()
 
         texttemplate = [
-            "      <div id=\"textbody desktoppagetext\" style=\"font-size: {}vw;\">\n".format(entry[6]),
+            "      <div id=\"textbody\" class=\"desktoppagetext\" style=\"font-size: {}vw;\">\n".format(entry[6]),
             "{}\n".format(pagebodydata),
             "      </div>\n",
-            "      <div id=\"textbody mobilepagetext\" style=\"font-size: {}vw;\">\n".format(entry[6] * 5),
+            "      <div id=\"textbody\" class=\"mobilepagetext\" style=\"font-size: {}vw;\">\n".format(float(entry[6]) * 5),
             "{}\n".format(pagebodydata),
             "      </div>\n"
         ]
