@@ -14,8 +14,8 @@ some time with liquidfy trying to dewarp everything. After that's done, I just
 have to make it seamless, this usually involves using the offset filter and
 the clone stamp. I'm going to say right here that anyone can use these textures
 however they want and I'm also going to provide the unscaled versions as well.
-<a href="../images/originals/Rajotte_HighResTextures01.png"> Texture 1 </a>
-<a href="../images/originals/Rajotte_HighResTextures02.png"> Texture 2 </a>
-<a href="../images/originals/Rajotte_HighResTextures03.png"> Texture 3 </a>
-<a href="../images/originals/Rajotte_HighResTextures04.png"> Texture 4 </a>
-<a href="../images/originals/Rajotte_HighResTextures05.png"> Texture 5 </a>
+<a href="../images/originals/Rajotte_HighResTextures01.png" style="color: rgb(90, 167, 184);"> Texture 1 </a>
+<a href="../images/originals/Rajotte_HighResTextures02.png" style="color: rgb(90, 167, 184);"> Texture 2 </a>
+<a href="../images/originals/Rajotte_HighResTextures03.png" style="color: rgb(90, 167, 184);"> Texture 3 </a>
+<a href="../images/originals/Rajotte_HighResTextures04.png" style="color: rgb(90, 167, 184);"> Texture 4 </a>
+<a href="../images/originals/Rajotte_HighResTextures05.png" style="color: rgb(90, 167, 184);"> Texture 5 </a>

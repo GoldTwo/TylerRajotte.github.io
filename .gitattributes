@@ -1,2 +1,6 @@
 *.mp4 filter=lfs diff=lfs merge=lfs -text
+images/originals/Rajotte_HighResTextures01.png filter=lfs diff=lfs merge=lfs -text
+images/originals/Rajotte_HighResTextures02.png filter=lfs diff=lfs merge=lfs -text
+images/originals/Rajotte_HighResTextures03.png filter=lfs diff=lfs merge=lfs -text
+images/originals/Rajotte_HighResTextures05.png filter=lfs diff=lfs merge=lfs -text
 images/originals/* filter=lfs diff=lfs merge=lfs -text
