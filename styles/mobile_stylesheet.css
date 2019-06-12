@@ -16,10 +16,17 @@ body{
 #titlewrapper{
   padding: 1%;
 }
+
 #title{
   color: white;
   font-family: 'Source Code Pro', monospace;
   font-size: 6vw;
+  text-align: center;
+}
+.subtitletext{
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 3.6vw;
   text-align: center;
 }
 #textbody{
@@ -29,6 +36,13 @@ body{
   font-weight: 300;
   margin: 2vw;
 }
+.link{
+  text-decoration: underline;
+}
+
+
+
+
 #pageimage{
   width: 100vw;
   margin: 2vw;

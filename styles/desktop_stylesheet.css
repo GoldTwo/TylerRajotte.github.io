@@ -7,7 +7,37 @@ body{
 }
 .hiddenlink{
   text-decoration: none;
+  cursor: pointer;
 }
+
+.link{
+  text-decoration: underline;
+}
+.link:hover{
+  animation-name: linkhover;
+  animation-duration: 0.75s;
+  animation-fill-mode: both;
+  -webkit-animation-name: linkhover;
+  -webkit-animation-duration: 0.75s;
+  -webkit-animation-fill-mode: both;
+}
+@keyframes linkhover{
+  from {
+    color: white;
+  }
+  to{
+    color: rgb(90, 167, 184);
+  }
+}
+@-wekit-keyframes linkhover{
+  from {
+    color: white;
+  }
+  to{
+    color: rgb(90, 167, 184);
+  }
+}
+
 #centeredtitle{
   display: flex;
   justify-content: center;
@@ -20,6 +50,15 @@ body{
   color: white;
   font-family: 'Source Code Pro', monospace;
   font-size: 2vw;
+  text-align: center;
+}
+
+
+.subtitletext{
+  color: white;
+  font-family: 'Source Code Pro', monospace;
+  font-size: 1.2vw;
+  text-align: center;
 }
 #textbody{
   width: 45vw;
@@ -28,6 +67,11 @@ body{
   font-weight: 300;
   margin: 2vw;
 }
+
+
+
+
+
 #pageimage{
   width: 45vw;
   margin: 2vw;
