@@ -1,0 +1,8 @@
+This project was finished quite a while ago but I never did get around to rendering it until now.
+The model behind all of this is just a stretched cube and everything else is in the material. When it comes to the
+material it can be broken into three sections, glass, building and light. The way the glass was done is that I have a separate
+"Texture" that I use to determine what should have glass and what should not using a mix shader. And the glass itself is just
+the default glass shader built into blender. The building material is just a principled bdsf with the regular texture as the colour and the light is an emission shader. To control the emission I just ramp the regular texture so that I only have the
+bright parts of the image and then I feed it all into the control of the mix shader. Besides this, the final material that is
+used in Scene 1 will also have some fancy selections that determine whats the top and then place roof textures there. Pretty cool
+for just a material that could be applied onto anything.
